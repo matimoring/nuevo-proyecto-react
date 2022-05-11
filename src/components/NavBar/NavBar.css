@@ -1,0 +1,15 @@
+.navbar {
+    background-color: grey;
+    color: rgb(65, 9, 9);
+    font-family: fantasy;
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid;
+}
+
+.container-logo{
+    width: 150px;   
+}
+.container-logo img{
+    width: 100%;
+}

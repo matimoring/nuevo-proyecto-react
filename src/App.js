@@ -1,11 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/NavBar/NavBar'
+
 
 function App() {
   return (
     <div className="App">
-      <h1>ECOMMERCE PROYECTO</h1>
+      <NavBar />
+      <h1 className="title">CAFÉ  -  A  -  TU  -  PUERTA</h1>
     </div>
+
   );
 }
 
