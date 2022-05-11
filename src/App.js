@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <h1 className="title">CAFÉ  -  A  -  TU  -  PUERTA</h1>
+      <h1 className="title">CAFE A TU PUERTA</h1>
     </div>
 
   );

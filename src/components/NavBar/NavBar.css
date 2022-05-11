@@ -1,5 +1,5 @@
 .navbar {
-    background-color: grey;
+    background-color: cornsilk;
     color: rgb(65, 9, 9);
     font-family: fantasy;
     float: left;
@@ -8,7 +8,7 @@
 }
 
 .container-logo{
-    width: 150px;   
+    width: 150px;
 }
 .container-logo img{
     width: 100%;

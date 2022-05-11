@@ -9,9 +9,9 @@ const NavBar = () =>{
     return (
         
             <AppBar position="static">
-            <Toolbar>
+            <Toolbar className="navbar">
                 <div className="container-logo">
-                    <img src="./logo-cafe.jpg"/>
+                    <img src="./cafelogo2.png"/>
                 </div>
                 <ul>
                 <li>
