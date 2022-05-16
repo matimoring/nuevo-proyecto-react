@@ -1,14 +1,22 @@
 .navbar {
-    background-color: black;
+    background-color: rgb(40, 21, 21);
     color: rgb(65, 9, 9);
-    font-family: fantasy;
-    float: left;
     width: 100%;
     border-bottom: 1px solid;
     text-align: center;
+    display: flex;
+
 
 }
 
+.header-appbar {
+    background: none !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid #ccc;
+}
+.header-appbar .navbar li {
+    margin-right: 25px;
+}
 .container-logo{
     width: 150px;
 }
@@ -18,23 +26,18 @@
 
 .navbar-menu{
     list-style: none;
-    display: inline;
-    text-align:left;
     background-attachment: fixed;
-
-
 
 }
 
 .login-boton{
-    text-align: right;
-    
+    text-align: center;
+    margin-right: 40px;
 }
 
 .btn-navbar{
-    color:white;
+    color: white;
     list-style: none;
-    display: inline;
     text-align:center;
     background-color: transparent;
     font-size: 20px;
