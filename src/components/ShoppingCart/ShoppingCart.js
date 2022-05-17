@@ -4,7 +4,7 @@ const ShoppingCart = () => {
     return(
     
     <div>
-        carrito
+        <ShoppingCart/>
     </div>
     )
 }

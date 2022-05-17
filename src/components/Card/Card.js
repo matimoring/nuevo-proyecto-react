@@ -2,9 +2,18 @@ import './Card.css'
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { Button } from '@mui/material';
+import Modal from '../Modal/Modal';
+import { useState } from 'react';
+
 //Functional component
     const CardItem = ({ image, title, price}) => {
-    return (
+            const [open, setOpen] = useState(false)
+        
+        const handleClose = () => {
+            setOpen(false) 
+        }
+    
+        return (
         <Card sx={{ minWidth: 275 }}  >
             <CardContent>
                 <div className="card-item">
@@ -13,9 +22,12 @@ import { Button } from '@mui/material';
                     </div>
                     <p>{title}</p>
                     <span>$ {price}</span>
-                    <Button variant={'contained'} color="inherit"> Detalle</Button>
+                    <Button variant={'contained'} color="inherit" onClick={() => setOpen(true)}> Agregar al Carrito</Button>
                 </div>
-            </CardContent> 
+            </CardContent>
+            <Modal handleClose={handleClose} open={open}>
+                <h2>Agregado al carrito!</h2>
+            </Modal>
         </Card>
         )
     }

@@ -2,7 +2,7 @@ import CardItem from '../Card/Card'
 import {Grid} from '@mui/material';
 
 
-const CardList = ()=> {
+const CardList = ({title})=> {
     const productos = () => [
         {
             title : 'Cafe fuerte',
@@ -53,6 +53,7 @@ const CardList = ()=> {
     ]
     return (
         <>
+        
         <Grid container>
                 <Grid item md={3}>
                     <CardItem title={"Café Colombia fuerte"} price={305} image={"cafe-fuerte.png"}/>

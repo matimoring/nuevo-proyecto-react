@@ -1,0 +1,9 @@
+.snackbar-custom {
+    position: fixed;
+    left: 10px;
+    bottom:40px;
+    background:lemonchiffon;
+    border-radius: 4px;
+    box-shadow: 1px 1px 9px #0000;
+    padding: 10px;
+}
