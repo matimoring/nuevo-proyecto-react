@@ -1,7 +1,7 @@
 .card-item img{
         width: 100%;
         height: fixed;
-        
+        border-radius: 50%;
 
 }
 
@@ -10,8 +10,10 @@
     flex-direction: column;
     box-shadow: black;
     flex-grow: inherit;
-    
+    box-shadow: 20px black;
+
 }
+
 .card-item p {
     font-size: 18px;
     font-weight: 700;

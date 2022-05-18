@@ -18,10 +18,10 @@ import { createTheme } from '@mui/material/styles';
                         <Button disableRipple style={{ backgroundColor: 'transparent' }} variant='contained' className='btn-navbar'>Hace tu pedido</Button>
                         <Button disableRipple style={{ backgroundColor: 'transparent' }} variant='contained' className='btn-navbar'>Quienes somos?</Button>
                         <Button disableRipple style={{ backgroundColor: 'transparent' }} variant='contained' className='btn-navbar'>Contacto</Button>
-                
-                    
-                </div>
-                <div className="login-boton ">< Button disableRipple style={{ backgroundColor: 'transparent' }} variant='contained'> 0 <ShoppingCartIcon/> </Button></div>
+            </div>
+            <div 
+                className="login-boton ">< Button disableRipple style={{ backgroundColor: 'transparent' }} variant='contained'> 0 <ShoppingCartIcon/> </Button>
+            </div>
                 
         </Toolbar>
         </AppBar>

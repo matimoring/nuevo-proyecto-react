@@ -1,10 +1,12 @@
 .navbar {
-    background-color: rgb(40, 21, 21);
+    background-color: black;
     color: rgb(65, 9, 9);
-    width: 100%;
+    width: auto;
     border-bottom: 1px solid;
     text-align: center;
     display: flex;
+    margin: 0;
+    padding: 0;
 
 
 }
@@ -27,12 +29,16 @@
 .navbar-menu{
     list-style: none;
     background-attachment: fixed;
+    
 
 }
 
 .login-boton{
-    text-align: center;
     margin-right: 40px;
+    margin: auto;
+    padding: auto;
+    padding-left: 50%;
+
 }
 
 .btn-navbar{
@@ -45,6 +51,7 @@
     cursor: pointer;
     font-family:cursive;
     margin: 100px;
+    
 }
 
 .btn-navbar:hover{
