@@ -50,7 +50,8 @@
     border: none;
     cursor: pointer;
     font-family:cursive;
-    margin: 100px;
+    margin: auto;
+    padding: auto;
     
 }
 
