@@ -7,6 +7,7 @@ import CardList from './components/CardList/CardList';
 import SnackBar from './components/SnackBar/SnackBar';
 import Modal from './components/Modal/Modal';
 import { useState } from 'react';
+import CardListContainer from './components/CardListContainer/CardListContainer';
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
     <div className="App">
       <NavBar /> 
         <div className="general-container">
-          <CardList />
+          <CardListContainer/>
         </div>
         <div>
           <SnackBar>

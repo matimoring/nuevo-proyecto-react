@@ -1,60 +1,31 @@
 import CardItem from '../Card/Card'
 import {Grid} from '@mui/material';
+import { useState, useEffect } from 'react';
 
 
-const CardList = ({title})=> {
-    const productos = () => [
-        {
-            title : 'Cafe fuerte',
-            price : 1500,
-            image : 'cafe-fuerte.png'
-        },
-        {
-            title : 'Cafe medio',
-            price : 1500,
-            image : 'cafe-medio.png'
-        },
-        {
-            title : 'Cafe suave',
-            price : 1500,
-            image : 'cafe-suave.png'
-        },
-        {
-            title : 'Cafe fuerte',
-            price : 1500,
-            image : 'cafe-fuerte.png'
-        },
-        {
-            title : 'Cafe medio',
-            price : 1500,
-            image : 'cafe-medio.png'
-        },
-        {
-            title : 'Cafe suave',
-            price : 1500,
-            image : 'cafe-suave.png'
-        },
-        {
-            title : 'Cafe extrasuave',
-            price : 1500,
-            image : 'cafe-extrasuave.png'
-        },
-        {
-            title : 'Cafe extrasuave',
-            price : 1500,
-            image : 'cafe-extrasuave.png'
-        },
-        {
-            title : 'Cafe extrasuave',
-            price : 1500,
-            image : 'cafe-extrasuave.png'
-        }
-        
-    ]
+
+const CardList = ({title, products })=> {
+
     return (
         <>
-        
-        <Grid container>
+        {console.log("state products: ", products )}
+        <Grid container spacing={5}>
+            {
+                products.map(({title, price, image, id}) => {
+                    return(
+                        <Grid item md={4} key={id}>
+                            <CardItem title={title} price={price} image={image} />
+                        </Grid>
+                    )
+                })
+            }
+        </Grid>
+        </>
+    );
+}
+
+export default CardList;
+        {/*<Grid container>
                 <Grid item md={3}>
                     <CardItem title={"Café Colombia fuerte"} price={305} image={"cafe-fuerte.png"}/>
                 </Grid>
@@ -99,8 +70,4 @@ const CardList = ({title})=> {
                     <CardItem title={"Café Colombia extra suave"} price={444} image={"cafe4.png"}/>
                 </Grid>
         </Grid>
-        </>
-    );
-}
-
-export default CardList;
+        */}

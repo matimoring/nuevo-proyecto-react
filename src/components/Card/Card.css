@@ -1,6 +1,6 @@
 .card-item img{
         width: 100%;
-        height: fixed;
+        height: auto;
         border-radius: 50%;
 
 }
@@ -8,6 +8,7 @@
 .card-item{
     display: flex;
     flex-direction: column;
+    width: 100%;
     box-shadow: black;
     flex-grow: inherit;
     box-shadow: 20px black;
@@ -18,16 +19,12 @@
     font-size: 18px;
     font-weight: 700;
     margin-top: 10px;
-    margin-bottom: 16px;
-    
-    
+    margin-bottom: 16px;  
 }
 
 .card-item span {
     margin-bottom: 10px;
     font-size: 16px;
-    
-
 }
 
 .count-item {
