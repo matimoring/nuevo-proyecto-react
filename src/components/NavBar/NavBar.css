@@ -49,9 +49,11 @@
     font-size: 20px;
     border: none;
     cursor: pointer;
-    font-family:cursive;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: auto;
     padding: auto;
+    text-transform: none;
+    text-decoration:none;
     
 }
 

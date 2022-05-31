@@ -4,6 +4,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { createTheme } from '@mui/material/styles';
+import { Link } from 'react-router-dom';
 //UpperCase
 
     const NavBar = () => {
@@ -14,10 +15,10 @@ import { createTheme } from '@mui/material/styles';
             <img src="./logo-coffee.png" />
             </div>
             <div className='navbar'>
-                        <Button disableRipple style={{ backgroundColor: 'transparent' }} variant='contained' className='btn-navbar'>Productos</Button>
-                        <Button disableRipple style={{ backgroundColor: 'transparent' }} variant='contained' className='btn-navbar'>Hace tu pedido</Button>
-                        <Button disableRipple style={{ backgroundColor: 'transparent' }} variant='contained' className='btn-navbar'>Quienes somos?</Button>
-                        <Button disableRipple style={{ backgroundColor: 'transparent' }} variant='contained' className='btn-navbar'>Contacto</Button>
+                        <Button disableRipple style={{ backgroundColor: 'transparent' }} variant='contained' > <Link className='btn-navbar' to='/'> Inicio</Link> </Button>
+                        <Button disableRipple style={{ backgroundColor: 'transparent' }} variant='contained' > <Link className='btn-navbar' to='/Detalle'> Detalle</Link> </Button>
+                        <Button disableRipple style={{ backgroundColor: 'transparent' }} variant='contained' > <Link className='btn-navbar' to='/Preguntas'> Preguntas Frecuentes</Link> </Button>
+                        <Button disableRipple style={{ backgroundColor: 'transparent' }} variant='contained' > <Link className='btn-navbar' to='/contact'> Contacto</Link> </Button>
             </div>
             <div 
                 className="login-boton ">< Button disableRipple style={{ backgroundColor: 'transparent' }} variant='contained'>  <ShoppingCartIcon/> </Button>

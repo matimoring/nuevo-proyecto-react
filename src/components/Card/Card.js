@@ -5,9 +5,11 @@ import { Button } from '@mui/material';
 import Modal from '../Modal/Modal';
 import { useState } from 'react';
 import ItemCount from '../ItemCount/ItemCount';
+import { Link } from 'react-router-dom';
+
 
 //Functional component
-    const CardItem = ({ image, title, price}) => {
+    const CardItem = ({ image, title, price, id}) => {
             const [open, setOpen] = useState(false)
 
         const handleClose = () => {

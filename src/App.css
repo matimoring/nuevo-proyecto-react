@@ -65,3 +65,27 @@
   background-image: url(https://previews.123rf.com/images/apirut/apirut1706/apirut170600004/79656613-textura-de-granos-de-caf%C3%A9-tostado-se-puede-utilizar-como-fondo.jpg);
   
 }
+
+.card-detail img{
+  display: block;
+  height: 100%;
+  border-radius: 50%;
+  padding-top: 15px;
+  width: 100%;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 25px;
+  
+}
+
+.card-detail{
+  position: relative;
+  margin: 190px auto 0;
+  /*margin-top: 190px;*/
+  max-width: 800px;
+  min-height: 600px;
+  box-shadow: 0 5px 21px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  margin:  auto;
+}
