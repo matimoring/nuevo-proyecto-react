@@ -6,6 +6,7 @@ const productos = [
         image : 'cafe-fuerte.png',
         description : 'Café Colombia fuerte',
         stock: 14,
+        category: 'Fuerte',
         id: 1
     },
     {
@@ -14,6 +15,7 @@ const productos = [
         image : 'cafe1.png',
         description : 'Café Camboya fuerte',
         stock: 12,
+        category: 'Fuerte',
         id: 2
     },
     {
@@ -22,6 +24,7 @@ const productos = [
         image : 'cafe2.png',
         description : 'Café Idonesia fuerte',
         stock: 15,
+        category: 'Fuerte',
         id: 3
     },
     {
@@ -30,6 +33,7 @@ const productos = [
         image : 'cafe3.png',
         description : 'Café Brasil fuerte',
         stock: 11,
+        category: 'Fuerte',
         id: 4
     },
     {
@@ -38,6 +42,7 @@ const productos = [
         image : 'cafe-medio.png',
         description : 'Café Brasil medio',
         stock: 18,
+        category: 'Medio',
         id: 5
     },
     {
@@ -46,6 +51,7 @@ const productos = [
         image : 'cafe-suave.png',
         description : 'Café Nicaragua medio',
         stock: 1,
+        category: 'Suave',
         id: 6
     },
     {
@@ -54,6 +60,7 @@ const productos = [
         image : 'cafe-extrasuave.png',
         description : 'Café Brasil extra suave',
         stock: 19,
+        category: 'Suave',
         id: 7
     },
     {
@@ -62,6 +69,7 @@ const productos = [
         image : 'cafe5.png',
         description : 'Café Indonesia suave',
         stock: 23,
+        category: 'Suave',
         id: 8
     },
     {
@@ -70,6 +78,7 @@ const productos = [
         image : 'cafe4.png',
         description : 'Café Colombia extra suave',
         stock: 23,
+        category: 'Suave',
         id: 9
     }
 ]

@@ -1,23 +1,31 @@
 import ItemDetail from "../ItemDetail/ItemDetail";
-import { producto } from "../../utils/productsMock";
-
+import productos from "../../utils/productsMock";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router";
+
 const ItemDetailContainer = () => {
-    const [product, setProduct] = useState({})
-    const getItem = () =>{
-        return new Promise( (resolve, reject)=> {
-            setTimeout(()=>{
-                resolve(producto)
-            },2000)
-        })
-    }
-    
+    const {id} = useParams()
+    const [product , setProduct] = useState({})
+
+    //const getItem = () =>{
+    //return new Promise( (resolve, reject)=> {
+    //        setTimeout(()=>{
+    //            resolve(producto)
+    //        },2000)
+    //    })
+    //}
+
     useEffect(()=>{
-        getItem()
-        .then((res)=>{
-            console.log("respuesta GetItem: ", res)
-            setProduct(res)
-        })
+    //    getItem()
+    //    .then((res)=>{
+    //        console.log("respuesta GetItem: ", res)
+    //        setProduct(res)
+    //    })
+    setProduct( productFilter)
+    }, [])
+    
+    const productFilter = productos.find((product) =>{
+        return product.id == id
     })
     
     return (

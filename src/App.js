@@ -11,6 +11,7 @@ import NotFound from './pages/NotFound';
 import PreguntasFrecuentes from './pages/PreguntasFrecuentes';
 import Detalle from './pages/Detalle';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import ProductList from './pages/ProductList';
 
 function App() {
   const [open, setOpen] = useState(false)
@@ -29,8 +30,9 @@ function App() {
           <Route exact path={'/contact'} element={<Contacto />} />
           <Route exact path='/' element={<Home />}/> 
           <Route exact path={'*'} element={<NotFound/>}  />
-          <Route exact path={'/Preguntas'} element={<PreguntasFrecuentes />}/>
-          <Route exact path={'/Detalle'} element={<Detalle />}/>
+          <Route exact path={'/preguntas'} element={<PreguntasFrecuentes />}/>
+          <Route exact path={'/product/:id'} element={<Home />}/>
+          <Route exact path={'/products/:category'} element={<ProductList />}/>
         </Routes> 
 
       </BrowserRouter>

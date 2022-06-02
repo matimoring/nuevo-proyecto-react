@@ -27,7 +27,7 @@ useEffect(()=>{
 
 return (
     <div className="general-container">
-        <CardList title={'Productos Recomendados'} products={productos} />
+        <CardList title={'Productos Recomendados'} products={products} />
     </div>
 )
 

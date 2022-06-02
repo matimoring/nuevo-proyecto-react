@@ -21,19 +21,21 @@ import { Link } from 'react-router-dom';
             <CardContent>
                 <div className="card-item">
                     <div>
-                        <img src={`./${image}`} />
+                        <img src={`/${image}`} />
                     </div>
                     <p>{title}</p>
                     <span>$ {price}</span>
                     <div>
                         <ItemCount />
                     </div>
+                    <Button variant={'outlined'} color="inherit" onClick={() => setOpen(true)}>  
+                    <Link to={`/product/${id}`}>Ver Detalle</Link>
+                    </Button>
+
                     <Button variant={'contained'} color="inherit" onClick={() => setOpen(true)}> Agregar al Carrito</Button>
                 </div>
             </CardContent>
-            <Modal handleClose={handleClose} open={open}>
-                <h2>Agregado al carrito!</h2>
-            </Modal>
+
         </Card>
         )
     }
