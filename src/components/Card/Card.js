@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 
 //Functional component
-    const CardItem = ({ image, title, price, id}) => {
+    const CardItem = ({ image, title, price, id,  cantidad}) => {
             const [open, setOpen] = useState(false)
 
         const handleClose = () => {
@@ -26,13 +26,11 @@ import { Link } from 'react-router-dom';
                     <p>{title}</p>
                     <span>$ {price}</span>
                     <div>
-                        <ItemCount />
+                        <ItemCount cantidad={cantidad}/>
                     </div>
-                    <Button variant={'outlined'} color="inherit" onClick={() => setOpen(true)}>  
-                    <Link to={`/product/${id}`}>Ver Detalle</Link>
-                    </Button>
-
-                    <Button variant={'contained'} color="inherit" onClick={() => setOpen(true)}> Agregar al Carrito</Button>
+                    
+                    <Link to={`/product/${id}`}><Button variant={'outlined'} color="inherit">    Ver Detalle </Button></Link>
+                    
                 </div>
             </CardContent>
 

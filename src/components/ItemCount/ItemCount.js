@@ -2,23 +2,22 @@ import Button from '@mui/material/Button';
 import { useState } from 'react';
 
 
-const ItemCount = () => {
-    const [count, setCount] = useState(1);
+const ItemCount = ({cantidad, setCantidad, setShowButton}) => {
 
     const addCount = () => {
-        setCount(count + 1);
-    };
+        setCantidad(cantidad + 1)
 
-    const removeCount = () => {
-        setCount(count - 1);
     };
 
     return (
-        <div className="count-item">
-        <Button onClick={removeCount} disabled={count == 1}> - </Button>
-        <p> {count} </p>
-        <Button onClick={addCount} disabled={count == 5}> + </Button>
+        <>
+        <div  className="count-item">
+            <Button > - </Button>
+            <p> {cantidad} </p>
+            <Button onClick={addCount}> + </Button>
         </div>
+        <Button variant={'outlined'}  onClick={()=>setShowButton(true)}>Agregar Producto</Button>
+        </>
     );
     };
 

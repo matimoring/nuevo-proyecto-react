@@ -31,15 +31,11 @@ function App() {
           <Route exact path='/' element={<Home />}/> 
           <Route exact path={'*'} element={<NotFound/>}  />
           <Route exact path={'/preguntas'} element={<PreguntasFrecuentes />}/>
-          <Route exact path={'/product/:id'} element={<Home />}/>
+          <Route exact path={'/product/:id'} element={<Detalle/>}/>
           <Route exact path={'/products/:category'} element={<ProductList />}/>
         </Routes> 
 
       </BrowserRouter>
-          <button onClick={() => setOpen(true)}>Novedades</button>
-          <Modal handleClose={handleClose} open={open}>
-            <p>NO HAY NOVEDADES</p>
-          </Modal>
           
     </div>
   );
