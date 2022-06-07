@@ -8,11 +8,15 @@ const ItemCount = ({cantidad, setCantidad, setShowButton}) => {
         setCantidad(cantidad + 1)
 
     };
+    const restCount = () => {
+        setCantidad(cantidad - 1)
+
+    };
 
     return (
         <>
         <div  className="count-item">
-            <Button > - </Button>
+            <Button onClick={restCount} > - </Button>
             <p> {cantidad} </p>
             <Button onClick={addCount}> + </Button>
         </div>

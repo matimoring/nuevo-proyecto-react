@@ -5,10 +5,13 @@ import { useState, useEffect } from 'react';
 
 
 const CardList = ({title, products })=> {
+    
+    
 
     return (
-        <>
+        <div>
         {console.log("state products: ", products )}
+        
         <Grid container spacing={5}>
             {
                 products.map(({title, price, image, id, stock}) => {
@@ -26,7 +29,8 @@ const CardList = ({title, products })=> {
                 })
             }
         </Grid>
-        </>
+        
+        </div>
     );
 }
 

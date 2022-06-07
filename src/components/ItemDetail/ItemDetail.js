@@ -24,13 +24,12 @@ const ItemDetail = ({data}) =>{
             <p>$ {data.price}</p>
 
         <ItemCount
-
         cantidad={cantidad}
-        setShowButton={setShowButton}
         setCantidad={setCantidad}
+        setShowButton={setShowButton}
         />
 
-        {showButton == true && <Button variant={'outlined'}  onClick={addProductToCart()}><Link to='/cart'> Finalizar Compra</Link> </Button>}
+        {showButton === true && <Button variant={'outlined'}  onClick={addProductToCart()}><Link to='/cart'> Finalizar Compra</Link> </Button>}
         </div>
         </>
     )
