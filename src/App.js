@@ -12,6 +12,8 @@ import PreguntasFrecuentes from './pages/PreguntasFrecuentes';
 import Detalle from './pages/Detalle';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import ProductList from './pages/ProductList';
+import ThemeProvider from './context/ThemeContext';
+import {CartProvider} from './context/CartContext';
 
 function App() {
   const [open, setOpen] = useState(false)
@@ -22,21 +24,21 @@ function App() {
   return (
     //JSX
     <div className="App">
-      <BrowserRouter> 
-
-        <NavBar /> 
-
-        <Routes>
-          <Route exact path={'/contact'} element={<Contacto />} />
-          <Route exact path='/' element={<Home />}/> 
-          <Route exact path={'*'} element={<NotFound/>}  />
-          <Route exact path={'/preguntas'} element={<PreguntasFrecuentes />}/>
-          <Route exact path={'/product/:id'} element={<Detalle/>}/>
-          <Route exact path={'/products/:category'} element={<ProductList />}/>
-        </Routes> 
-
-      </BrowserRouter>
-          
+      <CartProvider>
+        <ThemeProvider >
+          <BrowserRouter> 
+            <NavBar /> 
+            <Routes>
+              <Route exact path={'/contact'} element={<Contacto />} />
+              <Route exact path='/' element={<Home />}/> 
+              <Route exact path={'*'} element={<NotFound/>}  />
+              <Route exact path={'/preguntas'} element={<PreguntasFrecuentes />}/>
+              <Route exact path={'/product/:id'} element={<Detalle/>}/>
+              <Route exact path={'/products/:category'} element={<ProductList />}/>
+            </Routes> 
+          </BrowserRouter>
+        </ThemeProvider>
+      </CartProvider>      
     </div>
   );
 }

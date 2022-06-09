@@ -3,18 +3,20 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { Button } from '@mui/material';
 import Modal from '../Modal/Modal';
-import { useState } from 'react';
-import ItemCount from '../ItemCount/ItemCount';
+import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import CartContext from '../../context/CartContext';
 
 
 //Functional component
     const CardItem = ({ image, title, price, id, amount}) => {
-            const [open, setOpen] = useState(false)
+        const [open, setOpen] = useState(false)
 
         const handleClose = () => {
             setOpen(false) 
         }
+
+        const {addProductToCart} = useContext(CartContext)
 
         return (
         <Card sx={{ minWidth: 275 }}  >
@@ -25,13 +27,24 @@ import { Link } from 'react-router-dom';
                     </div>
                     <p>{title}</p>
                     <span>$ {price}</span>
-                    <div>
-                        <ItemCount
-                        />
-                    </div>
+
                     
-                    <Link to={`/product/${id}`}><Button variant={'outlined'} color="inherit">    Ver Detalle </Button></Link>
+                    <Link to={`/product/${id}`}>
+                        <Button 
+                            variant={'outlined'} 
+                            color="inherit"
+                            >    
+                                Ver Detalle 
+                        </Button>
+                    </Link>
                     
+                    <Button 
+                        variant={'outlined'} 
+                        color="inherit"
+                        onClick={()=>addProductToCart({image, title, price, id})}
+                        >    
+                            Agregar al carrito 
+                    </Button>
                 </div>
             </CardContent>
 

@@ -8,6 +8,8 @@ import { createTheme } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import CartWidget from '../CartWidget/CartWidget';
+
 
 //UpperCase
 
@@ -44,8 +46,9 @@ import MenuItem from '@mui/material/MenuItem';
                         
                         <Button disableRipple style={{ backgroundColor: 'transparent' }} variant='contained' > <Link className='btn-navbar' to='/contact'> Contacto</Link> </Button>
             </div>
-            <div 
-                className="login-boton ">< Button disableRipple style={{ backgroundColor: 'transparent' }} variant='contained'>  <ShoppingCartIcon/> </Button>
+            <div> 
+                
+                <CartWidget/>
             </div>
                 
         </Toolbar>

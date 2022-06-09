@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 const ItemCount = ({cantidad, setCantidad, setShowButton}) => {
 
+    
     const addCount = () => {
         setCantidad(cantidad + 1)
 
@@ -20,7 +21,12 @@ const ItemCount = ({cantidad, setCantidad, setShowButton}) => {
             <p> {cantidad} </p>
             <Button onClick={addCount}> + </Button>
         </div>
-        <Button variant={'outlined'}  onClick={()=>setShowButton(true)}>Agregar Producto</Button>
+        <Button 
+        variant={'outlined'}  
+        onClick={()=>setShowButton(true)}
+        >
+            Agregar Producto
+        </Button>
         </>
     );
     };
