@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import CardList from '../CardList/CardList';
 import productos from '../../utils/productsMock'
 
+
 const CardListContainer = () => {
 
 const [products, setProducts] = useState([])

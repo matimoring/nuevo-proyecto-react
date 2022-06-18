@@ -1,7 +1,7 @@
 import './Card.css'
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import { Button } from '@mui/material';
+import { Button, CircularProgress } from '@mui/material';
 import Modal from '../Modal/Modal';
 import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
@@ -18,6 +18,12 @@ import CartContext from '../../context/CartContext';
 
         const {addProductToCart} = useContext(CartContext)
 
+        const [txt, setTxt] = useState(false);
+
+        const changeText = () => {
+            setTxt(!txt);
+        };
+
         return (
         <Card sx={{ minWidth: 275 }}  >
             <CardContent>
@@ -29,13 +35,16 @@ import CartContext from '../../context/CartContext';
                     <span>$ {price}</span>
 
                     
-                    <Link to={`/product/${id}`}>
+                    <Link style={{textDecoration: 'none'}} to={`/product/${id}`}>
                         <Button 
                             variant={'outlined'} 
                             color="inherit"
+                            onClick={changeText}
+                            
                             >    
                                 Ver Detalle 
                         </Button>
+
                     </Link>
                     
                     <Button 

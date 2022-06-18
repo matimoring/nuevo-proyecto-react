@@ -4,6 +4,11 @@ import { useParams } from 'react-router-dom';
 import productos from '../utils/productsMock'
 import { useEffect, useState } from 'react';
 import CardList from '../components/CardList/CardList';
+import { CircularProgress } from '@mui/material';
+//Firestore
+import { collection, getDocs } from '@firebase/firestore';
+import db from '../utils/FirebaseConfig'
+
 
 const ProductList = () => {
     const [products, setProducts] = useState([])
@@ -11,18 +16,34 @@ const ProductList = () => {
 
     useEffect(()=>{
         setProducts([])
-        console.log("category: ", category)
+        console.log([])
+        console.log()
         getProducts2()
-        .then((response)=>{
-            filterByCategory(response)
+        .then( (productos)=>{
+            console.log("productos: ", productos)
+            category ? filterByCategory(productos, category) : setProducts(productos)
         })
-        }, [category])
+    }, [category])
 
-    const getProducts2 = () =>{
-        return new Promise ((resolve, reject)=>{
-            resolve(productos)
-        })
-    }
+        const getProducts2 = async () => {
+            const productSnapshot = await getDocs(collection(db, "productos"));
+            const productList = productSnapshot.docs.map((doc)=> {
+                let product = doc.data()
+                product.id = doc.id
+                console.log("doc: ", doc)
+                return doc.data()
+            })
+            return productList
+        }
+        
+        
+        
+
+//    const getProducts2 = () =>{
+//        return new Promise ((resolve, reject)=>{
+//            resolve(productos)
+//        })
+//    }
 
     const filterByCategory = (array) => {
         return array.map((item) => {
@@ -32,7 +53,15 @@ const ProductList = () => {
         })
     }
     return ( 
-        <div className="general-container"> Pagina filtrada
+        <div className="general-container"> 
+        
+        <div>
+            <span><CircularProgress/> </span> 
+        </div>
+        <div>
+            <div></div>
+        </div>
+        
         <CardList products={products} />
         </div>
     )

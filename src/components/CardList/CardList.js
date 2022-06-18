@@ -3,7 +3,6 @@ import {Grid} from '@mui/material';
 import { useState, useEffect } from 'react';
 
 
-
 const CardList = ({title, products })=> {
     
     
