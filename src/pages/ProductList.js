@@ -16,7 +16,6 @@ const ProductList = () => {
 
     useEffect(()=>{
         setProducts([])
-        console.log([])
         console.log()
         getProducts2()
         .then( (productos)=>{
@@ -31,7 +30,7 @@ const ProductList = () => {
                 let product = doc.data()
                 product.id = doc.id
                 console.log("doc: ", doc)
-                return doc.data()
+                return product
             })
             return productList
         }
