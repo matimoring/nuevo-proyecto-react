@@ -47,8 +47,10 @@ import CartWidget from '../CartWidget/CartWidget';
                         <Button disableRipple style={{ backgroundColor: 'transparent' }} variant='contained' > <Link className='btn-navbar' to='/contact'> Contacto</Link> </Button>
             </div>
             <div> 
+                <Button>
+                <Link to={'/cart'}>  <CartWidget/> </Link>
+                </Button>
                 
-                <CartWidget/>
             </div>
                 
         </Toolbar>

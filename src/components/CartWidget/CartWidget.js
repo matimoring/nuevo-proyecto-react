@@ -21,7 +21,7 @@ const CartWidget = ( ) => {
     return(
         <div className='cart-container-icon'>
             <ShoppingCartIcon
-                color={'primary'} 
+                style={{color:"white"}}
                 aria-controls={open ? 'basic-menu' : undefined}
                 aria-haspopup="true"
                 aria-expanded={open ? 'true' : undefined}

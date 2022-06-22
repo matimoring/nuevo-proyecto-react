@@ -1,0 +1,10 @@
+.form-cart {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.form-cart > div {
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
