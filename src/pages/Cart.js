@@ -1,15 +1,16 @@
 import { useContext, useState } from "react"
 import { Container, Button } from "@mui/material"
-import { Delete, Pages } from "@mui/icons-material"
+import { Construction, Delete, Pages } from "@mui/icons-material"
 import CartContext from "../context/CartContext"
 import TextField from '@mui/material/TextField';
 import Modal from '../components/Modal/Modal'
 import '../pages/Cart.css'
 import { addDoc, collection } from "firebase/firestore";
 import db from "../utils/FirebaseConfig";
+import { useNavigate } from "react-router";
 
 const Cart = () => {
-    const { cartListItems, totalPrice } = useContext(CartContext)
+    const { cartListItems, totalPrice, cleanCartOrder, deleteProduct } = useContext(CartContext)
     const [showModal, setShowModal] = useState(false)
     const [formValue, setFormValue] = useState({
         name:'',
@@ -29,6 +30,7 @@ const Cart = () => {
     })
 
     const [success, setSuccess] = useState()
+    const navigate = useNavigate()
 
     const handleSubmit = (e) =>{
         e.preventDefault()
@@ -43,13 +45,16 @@ const Cart = () => {
     }
 
     const saveData = async (newOrder) => {
-        const orderFireBase = collection(db,'ordenes')
-        const orderDoc = await addDoc(orderFireBase, newOrder)
-        console.log("orden generada", orderDoc.id)
-        setSuccess(orderDoc.id)
+        const orderFireBase = collection(db,'ordenes');
+        const orderDoc = await addDoc(orderFireBase, newOrder);
+        console.log("orden generada", orderDoc.id);
+        setSuccess(orderDoc.id);
+        cleanCartOrder();
     }
 
-    
+    const finishOrder = () =>{
+        navigate('/')
+    }
 
     return(
         <Container className='container-general'> 
@@ -80,7 +85,7 @@ const Cart = () => {
                             <p>1</p>
                         </div>
                         <div className='cart-table__content-price'>
-                            <button className='btn-delete'>
+                            <button onClick={()=>deleteProduct(item)} className='btn-delete'>
                                 <Delete />
                             </button>
                         </div>
@@ -98,14 +103,17 @@ const Cart = () => {
                         <p>Total</p>
                         <span>$ {totalPrice}</span>
                     </div>
-                    <Button className='btn-custom' onClick={() => setShowModal(true)} >Finalizar Compra</Button>
+                    <Button className='btn-custom' onClick={() => setShowModal(true)}  >Finalizar Compra</Button>
                 </div>
             </div>
         </div>
-        <Modal title={success ? "compra realizada con exito":"formulario de contacto"} open={showModal} handleClose={()=>setShowModal(false)}>
+        <Modal title={success ? "compra realizada con exito" : "formulario de contacto"} open={showModal} handleClose={()=>setShowModal(false)}>
             {success ? (
 
-            <div>La compra se genero con exito! nro. de orden: {success}</div>
+            <div>La compra se genero con exito! nro. de orden: {success}
+            
+                <button className='btn-custom-cart' onClick={finishOrder}    >Enviar</button>  
+            </div>
             ): (
                 <form className="form-cart" onSubmit={handleSubmit}>
                 <TextField 
@@ -121,7 +129,7 @@ const Cart = () => {
                 id="filled-basic" 
                 name="phone"
                 label="Telefono" 
-                variant="filled" 
+                variant="outlined" 
                 value={formValue.phone}
                 onChange={handleChange}
                 />
@@ -129,7 +137,7 @@ const Cart = () => {
                 id="standard-basic" 
                 name="mail"
                 label="Mail" 
-                variant="standard" 
+                variant="filled" 
                 value={formValue.mail}
                 onChange={handleChange}
                 />

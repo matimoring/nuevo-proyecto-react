@@ -19,10 +19,21 @@ const CartProvider = ({children}) =>{
     
     }
 
+    const deleteProduct = (product) =>{
+        setCartlistItems(cartListItems.filter((cartProduct)=>cartProduct.id !== product.id))
+    }
+
+    const cleanCartOrder = () =>{
+        setCartlistItems([])
+    }
+
+
     const data = {
         cartListItems,
         addProductToCart,
         totalPrice,
+        cleanCartOrder,
+        deleteProduct,
     }
 
     return (

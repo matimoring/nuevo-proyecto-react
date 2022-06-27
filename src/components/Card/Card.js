@@ -16,8 +16,6 @@ import CartContext from '../../context/CartContext';
             setOpen(false) 
         }
 
-        const {addProductToCart} = useContext(CartContext)
-
         const [txt, setTxt] = useState(false);
 
         const changeText = () => {
@@ -36,24 +34,16 @@ import CartContext from '../../context/CartContext';
 
                     
                     <Link style={{textDecoration: 'none'}} to={`/product/${id}`}>
-                        <Button 
-                            variant={'outlined'} 
-                            color="inherit"
-                            onClick={changeText}
-                            
-                            >    
-                                Ver Detalle 
-                        </Button>
-
+                        <div className="btn-custom-card">
+                            <Button 
+                                className="btn-custom-card"
+                                onClick={changeText}
+                                
+                                >    
+                                    Ver Detalle 
+                            </Button>
+                        </div>
                     </Link>
-                    
-                    <Button 
-                        variant={'outlined'} 
-                        color="inherit"
-                        onClick={()=>addProductToCart({image, title, price, id})}
-                        >    
-                            Agregar al carrito 
-                    </Button>
                 </div>
             </CardContent>
 

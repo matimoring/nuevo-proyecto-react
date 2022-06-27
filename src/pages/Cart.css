@@ -8,3 +8,15 @@
     margin-bottom: 15px;
     text-decoration: underline;
 }
+
+.btn-custom-cart{
+    background: black;
+    border-radius: 40px;
+    text-transform: none;
+    color: white;
+    font-family: 'Lato';
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-size: 14px;
+    display: flex;
+}

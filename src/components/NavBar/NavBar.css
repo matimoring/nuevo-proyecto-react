@@ -125,10 +125,12 @@
 
 .container-item-list-cart > a {
     text-decoration: none;
-    color: black;
+    color: white;
     background: black;
     padding: 10px 20px;
     text-align: center;
     border-radius: 50px;
     font-size: 12px;
 }
+
+

@@ -1,5 +1,6 @@
 import Button from '@mui/material/Button';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import CartContext from '../../context/CartContext';
 
 
 const ItemCount = ({cantidad, setCantidad, setShowButton}) => {
@@ -21,12 +22,13 @@ const ItemCount = ({cantidad, setCantidad, setShowButton}) => {
             <p> {cantidad} </p>
             <Button onClick={addCount}> + </Button>
         </div>
+        <div className= "cart-checkout-details button">
         <Button 
-        variant={'outlined'}  
-        onClick={()=>setShowButton(true)}
-        >
-            Agregar Producto
+            onClick={()=>{setShowButton(true)}}
+            >    
+            Agregar al carrito 
         </Button>
+        </div>
         </>
     );
     };

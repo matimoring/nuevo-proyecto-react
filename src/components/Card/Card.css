@@ -35,3 +35,14 @@
     border-bottom: 1px solid #ccc;
     margin-bottom: 10px;
 }
+
+.btn-custom-card {
+background: black;
+border-radius: 40px;
+text-transform: none;
+color: white;
+font-family: 'Lato';
+padding: 10px 20px;
+margin-top: 15px;
+font-size: 14px;
+}
