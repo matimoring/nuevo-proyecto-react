@@ -40,7 +40,7 @@ import CartContext from '../../context/CartContext';
                                 onClick={changeText}
                                 
                                 >    
-                                    Ver Detalle 
+                                    VER DETALLE 
                             </Button>
                         </div>
                     </Link>

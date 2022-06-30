@@ -1,6 +1,6 @@
 .card-item img{
         width: 350px;
-        height: auto;
+        height: 350px;
         border-radius: 50%;
 
 }
@@ -36,7 +36,7 @@
     margin-bottom: 10px;
 }
 
-.btn-custom-card {
+.btn-custom-card button{
 background: black;
 border-radius: 40px;
 text-transform: none;
@@ -45,4 +45,6 @@ font-family: 'Lato';
 padding: 10px 20px;
 margin-top: 15px;
 font-size: 14px;
+text-decoration-color: white;
 }
+
