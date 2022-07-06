@@ -58,6 +58,15 @@ const Cart = () => {
         navigate('/')
     }
 
+    const confirmOrder = () =>{
+        if (totalPrice == 0){
+            console.log("carrito vacio")
+        }
+            else {
+                setShowModal(true)
+            }
+    }
+
     return(
         <Container className='container-general'> 
         {console.log("order: ", order)}
@@ -109,7 +118,7 @@ const Cart = () => {
                         <p>Total</p>
                         <span>$ {totalPrice}</span>
                     </div>
-                    <Button className='btn-custom' onClick={() => setShowModal(true)}  style={{marginBottom:"10px"}} >FINALIZAR COMPRA</Button>
+                    <Button className='btn-custom' onClick={(confirmOrder)}  style={{marginBottom:"55px"}} >FINALIZAR COMPRA</Button>
                 </div>
             </div>
         </div>

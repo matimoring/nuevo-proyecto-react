@@ -12,7 +12,7 @@
     box-shadow: black;
     flex-grow: inherit;
     box-shadow: 20px black;
-
+    
 }
 
 .card-item p {
@@ -20,6 +20,7 @@
     font-weight: 700;
     margin-top: 10px;
     margin-bottom: 16px;  
+
 }
 
 .card-item span {

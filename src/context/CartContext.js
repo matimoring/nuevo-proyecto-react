@@ -4,28 +4,41 @@ const CartContext = createContext()
 
 const CartProvider = ({children}) =>{
 
-    const [cartListItems, setCartlistItems] = useState([])
+    const [cartListItems, setCartListItems] = useState([])
 
     const [totalPrice, setTotalPrice] = useState(0)
 
     const addProductToCart = (product, cantidad) => {
-        let isInCart = cartListItems.find(cartItem => cartItem.id === product.id)
+
+    let isInCart = cartListItems.find(cartItem => cartItem.id === product.id)
+        
         if(!isInCart) {
-            console.log("se agrego el producto ", product)
-            setTotalPrice(totalPrice + product.price * product.cantidad )
-            return setCartlistItems(cartListItems => [...cartListItems,product])
+        
+        console.log("se agrego el producto", product)
+        
+        setTotalPrice(totalPrice + product.price * product.cantidad )
+        
+        return setCartListItems(cartListItems => [...cartListItems,product])
+        
         }
-        console.log("El producto ya esta en el carrito")
-    
-    }
+        else{
+        
+        isInCart.cantidad += product.cantidad
+        
+        setCartListItems(cartListItems)
+        
+        }
+        
+            }
 
     const deleteProduct = (product) =>{
-        setCartlistItems(cartListItems.filter((cartProduct)=>cartProduct.id !== product.id))
+        setCartListItems(cartListItems.filter((cartProduct)=>cartProduct.id !== product.id))
+        setTotalPrice(totalPrice - product.price*product.cantidad)
     }
 
     const cleanCartOrder = () =>{
         setTotalPrice(0)
-        setCartlistItems([])
+        setCartListItems([])
     }
 
 

@@ -63,7 +63,11 @@
   padding: 5px;
   border: black solid;
   background-image: url(https://img.freepik.com/foto-gratis/vista-cercana-granos-cafe-tostados-frescos-oscuros-sobre-fondo-granos-cafe_141793-27283.jpg?t=st=1655642888~exp=1655643488~hmac=22930b25a8ae1f09bb9fccd43e4bcb65561ff3cb09db8f93b849a92757cda2f4&w=1800);
-  
+  background-attachment: fixed;
+  position: relative;
+  padding-bottom: 3em;
+  min-height: 100vh;
+
 }
 
 .card-detail img{
@@ -89,7 +93,10 @@
   background-color: #fff;
   margin:  auto;
   float: left;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .cart-footer {

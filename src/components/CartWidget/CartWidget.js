@@ -39,7 +39,7 @@ const CartWidget = ( ) => {
                 <div className='container-item-list-cart'>
                     {cartListItems.length === 0 && (
                         <>
-                            <p>No hay productos agregados al carrito</p>
+                            <p>No hay productos al carrito</p>
                             <Link to="/">Empezar a comprar</Link>
                         </>
                     )}

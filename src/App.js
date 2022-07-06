@@ -15,6 +15,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import ProductList from './pages/ProductList';
 import ThemeProvider from './context/ThemeContext';
 import {CartProvider} from './context/CartContext';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
               <Route exact path={'/products/:category'} element={<ProductList />}/>
               <Route exact path={'/cart'} element={<Cart />}/>
             </Routes> 
+            <Footer />
           </BrowserRouter>
         </ThemeProvider>
       </CartProvider>      

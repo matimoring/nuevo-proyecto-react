@@ -1,7 +1,7 @@
 .form-cart {
     display: flex;
     flex-direction: column;
-    
+    width: 100%;
 }
 
 .form-cart > div {
@@ -31,6 +31,8 @@
     display: flex;
     margin-left: 0px;
     margin-right: 100px;
+    margin-bottom: 50px;
+    flex-direction: row;
 }
 
     .col-cart-table__head {
@@ -68,8 +70,10 @@
         align-items: center;
         border-bottom: 1px solid #ccc;
         padding-bottom: 15px;
+        
     }
     
     .cart-table__content-title {
         flex-direction: column;
+        
     }
